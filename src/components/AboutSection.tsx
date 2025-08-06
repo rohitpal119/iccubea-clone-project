@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 const AboutSection = () => {
   return (
     <section className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           <Card>
             <CardContent className="p-6">
               <h2 className="text-2xl font-bold mb-4 text-secondary">About PCCOE</h2>

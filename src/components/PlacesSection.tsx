@@ -26,10 +26,10 @@ const PlacesSection = () => {
 
   return (
     <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-secondary">Places Near Pune</h2>
+      <div className="container mx-auto px-4 max-w-7xl">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-secondary">Places Near Pune</h2>
         
-        <div className="space-y-8 mb-8">
+        <div className="space-y-8 lg:space-y-12 mb-8">
           {places.map((place, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="grid md:grid-cols-3 gap-0">

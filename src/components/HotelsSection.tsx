@@ -25,10 +25,10 @@ const HotelsSection = () => {
 
   return (
     <section className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-secondary">Hotels near PCCOE, Pune</h2>
+      <div className="container mx-auto px-4 max-w-7xl">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-secondary">Hotels near PCCOE, Pune</h2>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8 items-stretch">
           {hotels.map((hotel, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-muted">

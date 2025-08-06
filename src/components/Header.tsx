@@ -24,29 +24,29 @@ const Header = () => {
   return (
     <header className="w-full">
       {/* Top logos section */}
-      <div className="bg-background border-b border-border py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <img src={pcceoLogo} alt="PCCOE Logo" className="h-12 w-auto" />
-              <img src={pcceoJubileeLogo} alt="PCCOE Silver Jubilee Logo" className="h-12 w-auto" />
+      <div className="bg-background border-b border-border py-4">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-6 flex-shrink-0">
+              <img src={pcceoLogo} alt="PCCOE Logo" className="h-16 w-auto" />
+              <img src={pcceoJubileeLogo} alt="PCCOE Silver Jubilee Logo" className="h-16 w-auto" />
             </div>
             
-            <div className="text-center flex-1 mx-8">
-              <h1 className="text-lg md:text-xl font-bold text-foreground leading-tight">
+            <div className="text-center flex-1 mx-6 min-w-0">
+              <h1 className="text-lg lg:text-xl xl:text-2xl font-bold text-foreground leading-tight">
                 9<sup>th</sup> International Conference on Control Communication, Computing & Automation (ICCUBEA-2025)
               </h1>
-              <p className="text-sm text-muted-foreground mt-1">
+              <p className="text-xs lg:text-sm text-muted-foreground mt-2">
                 (Smart Living: Exploring Sustainability, Connected Technologies & their Potential)
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs lg:text-sm text-muted-foreground">
                 (IEEE Conference Record Number 65967) (In-person Mode Only)
               </p>
             </div>
             
-            <div className="flex items-center gap-4">
-              <img src={ieeeSection} alt="IEEE Pune Section" className="h-12 w-auto" />
-              <Button variant="outline" className="text-conference-orange border-conference-orange hover:bg-conference-orange hover:text-white">
+            <div className="flex items-center gap-6 flex-shrink-0">
+              <img src={ieeeSection} alt="IEEE Pune Section" className="h-16 w-auto" />
+              <Button variant="outline" className="text-conference-orange border-conference-orange hover:bg-conference-orange hover:text-white whitespace-nowrap">
                 ICCUBEA 2025
               </Button>
             </div>

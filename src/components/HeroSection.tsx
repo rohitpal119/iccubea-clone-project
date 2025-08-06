@@ -48,35 +48,37 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/50" />
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4">
-        <div className="bg-black/70 backdrop-blur-sm p-8 rounded-lg max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            9th International Conference on Control Communication,<br />
-            Computing & Automation (ICCUBEA-2025)
-          </h1>
-          
-          <div className="mt-8">
-            <h2 className="text-xl mb-2 text-gray-300">Conference Date</h2>
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              22<sup>nd</sup> & 23<sup>rd</sup> August 2025
-            </h3>
+      <div className="relative z-10 text-center text-white px-4 w-full">
+        <div className="container mx-auto max-w-6xl">
+          <div className="bg-black/70 backdrop-blur-sm p-8 lg:p-12 rounded-lg">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
+              9th International Conference on Control Communication,<br />
+              Computing & Automation (ICCUBEA-2025)
+            </h1>
             
-            <div className="flex justify-center gap-4 flex-wrap">
-              <div className="bg-primary text-primary-foreground p-4 rounded-lg min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.days}</div>
-                <div className="text-sm uppercase">Days</div>
-              </div>
-              <div className="bg-primary text-primary-foreground p-4 rounded-lg min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.hours}</div>
-                <div className="text-sm uppercase">Hours</div>
-              </div>
-              <div className="bg-primary text-primary-foreground p-4 rounded-lg min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.minutes}</div>
-                <div className="text-sm uppercase">Minutes</div>
-              </div>
-              <div className="bg-primary text-primary-foreground p-4 rounded-lg min-w-[80px]">
-                <div className="text-2xl font-bold">{timeLeft.seconds}</div>
-                <div className="text-sm uppercase">Seconds</div>
+            <div className="mt-8">
+              <h2 className="text-xl lg:text-2xl mb-4 text-gray-300">Conference Date</h2>
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-8">
+                22<sup>nd</sup> & 23<sup>rd</sup> August 2025
+              </h3>
+              
+              <div className="flex justify-center gap-4 lg:gap-6 flex-wrap max-w-md mx-auto">
+                <div className="bg-primary text-primary-foreground p-4 lg:p-6 rounded-lg flex-1 min-w-[90px]">
+                  <div className="text-2xl lg:text-3xl font-bold">{timeLeft.days}</div>
+                  <div className="text-sm lg:text-base uppercase tracking-wide">Days</div>
+                </div>
+                <div className="bg-primary text-primary-foreground p-4 lg:p-6 rounded-lg flex-1 min-w-[90px]">
+                  <div className="text-2xl lg:text-3xl font-bold">{timeLeft.hours}</div>
+                  <div className="text-sm lg:text-base uppercase tracking-wide">Hours</div>
+                </div>
+                <div className="bg-primary text-primary-foreground p-4 lg:p-6 rounded-lg flex-1 min-w-[90px]">
+                  <div className="text-2xl lg:text-3xl font-bold">{timeLeft.minutes}</div>
+                  <div className="text-sm lg:text-base uppercase tracking-wide">Minutes</div>
+                </div>
+                <div className="bg-primary text-primary-foreground p-4 lg:p-6 rounded-lg flex-1 min-w-[90px]">
+                  <div className="text-2xl lg:text-3xl font-bold">{timeLeft.seconds}</div>
+                  <div className="text-sm lg:text-base uppercase tracking-wide">Seconds</div>
+                </div>
               </div>
             </div>
           </div>

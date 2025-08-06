@@ -14,8 +14,8 @@ const Index = () => {
       <Header />
       <HeroSection />
       
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-3 space-y-0">
             <AboutSection />
             <ProceedingsSection />

@@ -15,10 +15,10 @@ const ProceedingsSection = () => {
 
   return (
     <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-secondary">Previous Conferences Proceedings</h2>
+      <div className="container mx-auto px-4 max-w-7xl">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-secondary">Previous Conferences Proceedings</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-6 justify-items-center">
           {proceedings.map((proceeding) => (
             <Card key={proceeding.year} className="hover:shadow-lg transition-shadow cursor-pointer">
               <CardContent className="p-4 text-center">
