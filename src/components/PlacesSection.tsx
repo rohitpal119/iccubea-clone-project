@@ -1,7 +1,7 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin } from "lucide-react"; // icon for distance
-// import { places } from "./placesData"; // if you're separating data, or keep inline
+import { MapPin } from "lucide-react";
 
 const PlacesSection = () => {
   const places = [
@@ -32,40 +32,41 @@ const PlacesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-secondary">
+    <section className="py-16 bg-green-50">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <h2 className="text-3xl font-extrabold text-green-900 text-center mb-12">
           Places Near Pune
         </h2>
 
-        {/* Cards layout */}
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {places.map((place, index) => (
             <Card
               key={index}
-              className="overflow-hidden shadow-md transition-shadow flex flex-col h-[500px]"
+              className="overflow-hidden shadow-md rounded-2xl flex flex-col h-[500px] transition-transform hover:scale-[1.03] hover:shadow-xl duration-300"
             >
               <img
                 src={place.image}
                 alt={place.name}
                 className="w-full h-48 object-cover"
+                loading="lazy"
               />
-              <CardContent className="p-4 flex flex-col flex-1">
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+              <CardContent className="p-6 flex flex-col flex-1">
+                <h3 className="text-2xl font-semibold text-green-900 mb-3">
                   {place.name}
                 </h3>
 
-                {/* Scrollable description */}
-                <div className="overflow-y-auto text-sm text-muted-foreground pr-1 mb-4 max-h-[140px]">
+                <div
+                  className="flex-1 overflow-y-auto text-green-700 text-sm pr-2 mb-6 leading-relaxed scrollbar-thin scrollbar-thumb-green-400 scrollbar-track-green-100"
+                  style={{ maxHeight: "140px" }}
+                >
                   {place.description}
                 </div>
 
-                {/* Distance footer */}
-                <div className="mt-auto text-center font-semibold text-sm border-t pt-3">
-                  <div className="flex flex-col items-center gap-1 text-primary">
+                <div className="mt-auto pt-3 border-t border-green-200">
+                  <div className="flex items-center justify-center gap-2 text-green-700 font-semibold text-sm">
+                    <MapPin className="w-5 h-5 text-green-600" />
                     <span>Distance from Pune: {place.distance}</span>
-                    <MapPin className="w-5 h-5" />
                   </div>
                 </div>
               </CardContent>
@@ -77,7 +78,8 @@ const PlacesSection = () => {
         <div className="text-center">
           <Button
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-white"
+            className="border-green-700 text-green-700 hover:bg-green-700 hover:text-white transition"
+            aria-label="Read more places near Pune"
           >
             Read More
           </Button>

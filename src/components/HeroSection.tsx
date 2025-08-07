@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const campusBackground = "public/images/banner1.jpg"; // Update path if needed
+const campusBackground = "/images/banner1.jpg"; // Update path if needed
 
 
 interface TimeLeft {

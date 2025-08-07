@@ -6,59 +6,73 @@ const RegistrationTable = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-white flex flex-col items-center px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Registration</h1>
+      <main className="min-h-screen bg-green-50 flex flex-col items-center px-4 py-16">
+        <h1 className="text-4xl font-extrabold text-green-900 mb-12 text-center leading-tight max-w-3xl">
+          Registration Fees
+        </h1>
 
-        <div className="w-full max-w-5xl bg-white shadow-lg rounded-lg overflow-x-auto border border-gray-200">
-          <table className="min-w-full text-center">
-            <thead className="bg-gray-100 text-gray-700 text-lg">
+        <div className="w-full max-w-5xl bg-white rounded-xl shadow-lg overflow-x-auto border border-green-200">
+          <table className="min-w-full table-auto text-center divide-y divide-green-200">
+            <thead className="bg-green-100 text-green-800 text-lg font-semibold tracking-wide">
               <tr>
-                <th className="py-4 px-6 border-b">Category</th>
-                <th className="py-4 px-6 border-b">Domestic</th>
-                <th className="py-4 px-6 border-b">International</th>
+                <th className="py-4 px-6">Category</th>
+                <th className="py-4 px-6">Domestic (INR)</th>
+                <th className="py-4 px-6">International (USD)</th>
               </tr>
             </thead>
-            <tbody className="text-gray-800 text-md">
-              <tr>
-                <td className="py-4 px-6 border-b">IEEE Member (Academician/Researcher/Industry)</td>
-                <td className="py-4 px-6 border-b">₹8,000</td>
-                <td className="py-4 px-6 border-b">$200</td>
-              </tr>
-              <tr>
-                <td className="py-4 px-6 border-b">Non-IEEE Member (Academician/Researcher/Industry)</td>
-                <td className="py-4 px-6 border-b">₹10,000</td>
-                <td className="py-4 px-6 border-b">$250</td>
-              </tr>
-              <tr>
-                <td className="py-4 px-6 border-b">IEEE Student Member (UG/PG/Research Scholar)</td>
-                <td className="py-4 px-6 border-b">₹5,000</td>
-                <td className="py-4 px-6 border-b">$150</td>
-              </tr>
-              <tr>
-                <td className="py-4 px-6 border-b">Non-IEEE Student Member (UG/PG/Research Scholar)</td>
-                <td className="py-4 px-6 border-b">₹6,000</td>
-                <td className="py-4 px-6 border-b">$200</td>
-              </tr>
-              <tr>
-                <td className="py-4 px-6 border-b">Attendee (Without Paper)</td>
-                <td className="py-4 px-6 border-b">₹2,000</td>
-                <td className="py-4 px-6 border-b">$100</td>
-              </tr>
-              <tr>
-                <td className="py-4 px-6 border-b">Additional Paper</td>
-                <td className="py-4 px-6 border-b">₹2,000</td>
-                <td className="py-4 px-6 border-b">$50</td>
-              </tr>
+            <tbody className="text-green-900 text-md divide-y divide-green-100">
+              {[
+                {
+                  category: "IEEE Member (Academician/Researcher/Industry)",
+                  domestic: "₹8,000",
+                  international: "$200",
+                },
+                {
+                  category: "Non-IEEE Member (Academician/Researcher/Industry)",
+                  domestic: "₹10,000",
+                  international: "$250",
+                },
+                {
+                  category: "IEEE Student Member (UG/PG/Research Scholar)",
+                  domestic: "₹5,000",
+                  international: "$150",
+                },
+                {
+                  category: "Non-IEEE Student Member (UG/PG/Research Scholar)",
+                  domestic: "₹6,000",
+                  international: "$200",
+                },
+                {
+                  category: "Attendee (Without Paper)",
+                  domestic: "₹2,000",
+                  international: "$100",
+                },
+                {
+                  category: "Additional Paper",
+                  domestic: "₹2,000",
+                  international: "$50",
+                },
+              ].map(({ category, domestic, international }, idx) => (
+                <tr
+                  key={idx}
+                  className="hover:bg-green-50 transition-colors duration-200"
+                >
+                  <td className="py-5 px-6 text-left font-medium">{category}</td>
+                  <td className="py-5 px-6">{domestic}</td>
+                  <td className="py-5 px-6">{international}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
 
         <button
-          className="mt-10 bg-[#B70E2B] hover:bg-[#9a0c25] text-white font-semibold px-8 py-3 rounded-lg shadow-md transition duration-300"
+          type="button"
+          className="mt-12 bg-green-700 hover:bg-green-800 text-white font-semibold px-10 py-4 rounded-xl shadow-lg transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
         >
           Register Now
         </button>
-      </div>
+      </main>
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ConferenceModal from "@/components/ConferenceModal";
+// import ConferenceModal from "@/components/ConferenceModal";
 import AboutSection from "@/components/AboutSection";
 import ProceedingsSection from "@/components/ProceedingsSection";
 import HotelsSection from "@/components/HotelsSection";
@@ -34,7 +34,7 @@ const Index = () => {
       </div>
 
       <Footer />
-      <ConferenceModal />
+      {/* <ConferenceModal /> */}
     </div>
   );
 };

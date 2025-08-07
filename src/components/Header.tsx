@@ -1,17 +1,15 @@
-// header.tsx (edited to include routing for all nav items)
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ieeeSection from "@/assets/ieee-pune-section.png";
 
 const Header = () => {
-  const [activeTab, setActiveTab] = useState("HOME");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { name: "HOME", path: "/" },
-    { name: "ABOUT US", path: "/about" },
-    { name: "ICCUBEA", path: "/iccubea" },
+    { name: "TRACKS", path: "/about" },
+    { name: "ICITET", path: "/iccubea" },
     { name: "REGISTRATION", path: "/registration" },
     { name: "COMMITTEE", path: "/committee" },
     { name: "CALL FOR PAPERS", path: "/call-for-papers" },
@@ -19,9 +17,13 @@ const Header = () => {
     { name: "CONTACT US", path: "/contact" },
   ];
 
-  const handleNavClick = (item: any) => {
-    setActiveTab(item.name);
-    navigate(item.path);
+  // Determine active tab based on current path
+  const activeTab = navItems.find(item => item.path === location.pathname)?.name || "HOME";
+
+  const handleNavClick = (item: { name: string; path: string }) => {
+    if (location.pathname !== item.path) {
+      navigate(item.path);
+    }
   };
 
   return (
@@ -39,7 +41,10 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-4">
               <img src={ieeeSection} alt="IEEE Pune Section" className="h-15 w-auto" />
-              <Button variant="outline" className="text-conference-orange border-conference-orange hover:bg-conference-orange hover:text-white">
+              <Button
+                variant="outline"
+                className="text-conference-orange border-conference-orange hover:bg-conference-orange hover:text-white"
+              >
                 ICITET-2026
               </Button>
             </div>

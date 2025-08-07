@@ -20,6 +20,7 @@ import Committee from "./pages/Committee";
 import CallForPapers from "./pages/CallForPapers";
 import Submission from "./pages/Submission";
 import { Contact } from "lucide-react";
+import ContactUs from "./pages/ContactUs";
 
 const queryClient = new QueryClient();
 
@@ -37,7 +38,7 @@ const App = () => (
           <Route path="/committee" element={<Committee />} />
           <Route path="/call-for-papers" element={<CallForPapers />} />
           <Route path="/submission" element={<Submission />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactUs />} />
           {/* Catch-all for unknown routes */}
           <Route path="*" element={<NotFound />} />
         </Routes>
