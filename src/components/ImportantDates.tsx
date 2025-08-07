@@ -4,27 +4,35 @@ import { Calendar } from "lucide-react";
 const ImportantDates = () => {
   const dates = [
     {
-      month: "May",
+      month: "February",
       date: "15",
-      year: "2025",
-      event: "Full Paper Submission",
+      year: "2026",
+      event: "Abstract Submission",
       suffix: "th"
     },
     {
-      month: "July",
-      date: "5",
-      year: "2025",
-      event: "Notification of Acceptance",
+      month: "April",
+      date: "15",
+      year: "2026",
+      event: "Full Paper Submission ",
       suffix: "th",
-      strikethrough: "25th June 2025"
+      // strikethrough: "25th June 2025"
     },
     {
-      month: "July",
-      date: "10",
-      year: "2025", 
-      event: "Camera Ready Paper Submission",
+      month: "May",
+      date: "20",
+      year: "2026", 
+      event: "Notification of Acceptance ",
       suffix: "th",
-      strikethrough: "30th June 2025"
+      // strikethrough: "30th June 2025"
+    },
+    {
+      month: "May",
+      date: "31",
+      year: "2026", 
+      event: "Final Full Length Camera Ready Paper",
+      suffix: "th",
+      // strikethrough: "30th June 2025"
     }
   ];
 
@@ -48,11 +56,11 @@ const ImportantDates = () => {
                 <div className="font-medium">
                   {item.date}<sup>{item.suffix}</sup> {item.month} {item.year}
                 </div>
-                {item.strikethrough && (
+                {/* {item.strikethrough && (
                   <div className="text-sm line-through text-muted-foreground">
                     {item.strikethrough}
                   </div>
-                )}
+                )} */}
                 <div className="text-sm mt-1">{item.event}</div>
               </div>
             </div>
