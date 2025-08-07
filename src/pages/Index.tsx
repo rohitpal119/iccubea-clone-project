@@ -13,22 +13,26 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      
-      <div className="container mx-auto px-4 py-8 max-w-7xl flex justify-center">
-        <div className="grid xl:grid-cols-5 gap-8 lg:gap-12">
-          <div className="xl:col-span-4 space-y-0">
+
+      {/* Grid only for About and Sidebar */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid lg:grid-cols-4 gap-8">
+          <div className="lg:col-span-3">
             <AboutSection />
-            <ProceedingsSection />
-            <HotelsSection />
-            <PlacesSection />
           </div>
-          
-          <div className="xl:col-span-1">
+          <div className="lg:col-span-1">
             <Sidebar />
           </div>
         </div>
+
+        {/* Centered below grid */}
+        <div className="mt-8 space-y-8 text-center">
+          <ProceedingsSection />
+          <HotelsSection />
+          <PlacesSection />
+        </div>
       </div>
-      
+
       <Footer />
       <ConferenceModal />
     </div>
@@ -36,3 +40,4 @@ const Index = () => {
 };
 
 export default Index;
+
