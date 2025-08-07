@@ -23,32 +23,32 @@ const RegistrationTable = () => {
             <tbody className="text-green-900 text-md divide-y divide-green-100">
               {[
                 {
-                  category: "IEEE Member (Academician/Researcher/Industry)",
-                  domestic: "₹8,000",
-                  international: "$200",
+                  category: "IEEE member (Faculty)	7,000/-	130$",
+                  domestic: "₹7,000",
+                  international: "$130",
                 },
                 {
-                  category: "Non-IEEE Member (Academician/Researcher/Industry)",
-                  domestic: "₹10,000",
-                  international: "$250",
-                },
-                {
-                  category: "IEEE Student Member (UG/PG/Research Scholar)",
-                  domestic: "₹5,000",
+                  category: "NON- IEEE (Faculty)",
+                  domestic: "₹9,000",
                   international: "$150",
                 },
                 {
-                  category: "Non-IEEE Student Member (UG/PG/Research Scholar)",
+                  category: "IEEE Student Member (UG/PG/Research Scholar)",
                   domestic: "₹6,000",
-                  international: "$200",
-                },
-                {
-                  category: "Attendee (Without Paper)",
-                  domestic: "₹2,000",
                   international: "$100",
                 },
                 {
-                  category: "Additional Paper",
+                  category: "Fellow-Industries",
+                  domestic: "₹12,000",
+                  international: "$175",
+                },
+                {
+                  category: "NON- IEEE student",
+                  domestic: "₹7,000",
+                  international: "$130",
+                },
+                {
+                  category: "Attendees",
                   domestic: "₹2,000",
                   international: "$50",
                 },
